@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Tembo ❤️</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
+  body{background:#0f0a0a;min-height:100vh;display:flex;justify-content:center;padding:18px;color:#fff5e6}
+  .card{background:linear-gradient(180deg,#1a1111,#241414);max-width:540px;width:100%;border-radius:28px;padding:28px 22px;text-align:center;box-shadow:0 20px 50px rgba(0,0,0,.6);border:1px solid #3a1f1f}
+  .top{font-size:28px;letter-spacing:2px}
+  h1{color:#ff3b3b;font-size:32px;margin:10px 0 4px}
+  .sub{color:#ffcccc;font-size:15px;margin-bottom:18px}
+  .photo-wrap{position:relative;border-radius:22px;overflow:hidden;border:3px solid #e63946;box-shadow:0 10px 30px rgba(230,57,70,.35)}
+  .photo-wrap img{width:100%;height:320px;object-fit:cover;display:block;filter:saturate(1.1) contrast(1.05)}
+  .photo-label{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.85));padding:30px 12px 12px;font-weight:700;font-size:16px}
+  .envelope{background:#e63946;border-radius:18px;padding:18px;margin-top:20px;cursor:pointer}
+  .envelope p{font-size:18px;font-weight:800}
+  .envelope span{font-size:13px;opacity:.9}
+  #letter{display:none;text-align:left;background:#fff5e6;color:#2b1a1a;border-radius:18px;padding:20px;margin-top:16px;line-height:1.75;font-size:16px}
+  #letter b{color:#c1121f}
+  .reasons{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+  .reason{background:#2e1a1a;border:1px solid #4a2626;border-radius:14px;padding:12px;font-size:14px}
+  .btn{background:#e63946;color:white;border:none;padding:15px;border-radius:999px;font-size:16px;font-weight:800;margin-top:20px;width:100%;cursor:pointer;box-shadow:0 8px 20px rgba(230,57,70,.5)}
+  .footer{margin-top:14px;font-size:13px;color:#b99}
+  .confetti{position:fixed;top:-10px;font-size:22px;animation:fall linear forwards;pointer-events:none;z-index:99}
+  @keyframes fall{to{transform:translateY(110vh) rotate(360deg);opacity:0}}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="top">🖤 ❤️ 🖤</div>
+  <h1>Good Luck, My Love</h1>
+  <p class="sub">For Tembo — I'm so proud of you already</p>
+
+  <div class="photo-wrap">
+    <img src="us.jpg" alt="Us">
+    <div class="photo-label">Us, always ❤️</div>
+  </div>
+
+  <div class="envelope" onclick="openLetter()">
+    <p>💌 Tap to open my letter to you</p>
+    <span>from your girl, with all my heart</span>
+  </div>
+
+  <div id="letter">
+    <p>Hi my love,</p><br>
+    <p>I know finals are here and your heart is beating a little fast. I just wanted you to know — <b>I believe in you. So, so much.</b></p><br>
+    <p>It's completely normal to feel anxious, especially after last time. But baby, look at how hard you've worked. You prepared. You showed up even on the days it was hard. You are <b>more than ready</b> for this.</p><br>
+    <p>I'm here, cheering for you the whole way — in every exam, every paper, every question. I'm your loudest cheerleader, I promise.</p><br>
+    <p>And when it's all over, I'll be right here waiting for you patiently, ready to celebrate ALL your wins. Because I know you're going to ace this.</p><br>
+    <p>Never doubt this: <b>I love you a lot.</b> Not just when you win, but always. Through the nerves, through the results, through everything.</p><br>
+    <p>Now go and show those exams who you are. You've got this, my love. 💪❤️</p><br>
+    <p style="text-align:right"><b>— Your girl, always rooting for you 🫶</b></p>
+  </div>
+
+  <div class="reasons">
+    <div class="reason">🖤 You prepared well</div>
+    <div class="reason">❤️ You are stronger than anxiety</div>
+    <div class="reason">🔥 You are meant for this</div>
+    <div class="reason">✨ I am so proud of you</div>
+  </div>
+
+  <button class="btn" onclick="celebrate()">Click for a good luck hug 🤗</button>
+  <p class="footer">Made with love, just for you • You've got this, Tembo!</p>
+</div>
+
+<script>
+function openLetter(){
+  document.getElementById('letter').style.display='block';
+  celebrate();
+}
+function celebrate(){
+  const emojis=['❤️','🖤','🔥','✨','🥳','💋'];
+  for(let i=0;i<35;i++){
+    const s=document.createElement('div');
+    s.className='confetti';
+    s.textContent=emojis[Math.floor(Math.random()*emojis.length)];
+    s.style.left=Math.random()*100+'vw';
+    s.style.animationDuration=(Math.random()*2+2)+'s';
+    document.body.appendChild(s);
+    setTimeout(()=>s.remove(),4000);
+  }
+  alert('Sending you the biggest good luck hug! You are going to ACE it! 🫶❤️');
+}
+</script>
+</body>
+  </html>
